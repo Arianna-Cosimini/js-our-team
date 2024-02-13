@@ -57,8 +57,29 @@ const team = [
     }
 ];
 
+
+// creo elemento per poter inserire img
+let img = document.createElement("img"); 
+
+
+
+// inserito percorso dell'immagine
+img.src = "img/wayne-barnett-founder-ceo.jpg"; 
+let founder = document.querySelector(".img-founder"); 
+img.style.width = "100%"
+
+// Aggiungo elemento figlio a founder
+founder.append(img); 
+
+// stampo in pagina il nome
 document.querySelector(".founder").innerHTML = (team[0].nome)
+// stampo in pagina il ruolo
 document.querySelector(".founder-span").innerHTML = (team[0].ruolo)
+
+
+
+
+
 
 document.querySelector(".chief").innerHTML = (team[1].nome)
 document.querySelector(".chief-span").innerHTML = (team[1].ruolo)
