@@ -26,46 +26,62 @@ Stampare le stesse informazioni su DOM sottoforma di stringhe
 // Creo array di oggetti
 const team = [
     {
-        nome : "Wayne Barnett",
+        nome: "Wayne Barnett",
         ruolo: "Founder & CEO",
-        foto:  "wayne-barnett-founder-ceo.jpg"
+        foto: "wayne-barnett-founder-ceo.jpg"
     },
     {
-        nome : "Angela Caroll",
+        nome: "Angela Caroll",
         ruolo: "Chief Editor",
-        foto:  "angela-caroll-chief-editor.jpg"
+        foto: "angela-caroll-chief-editor.jpg"
     },
     {
-        nome : "Walter Gordon",
+        nome: "Walter Gordon",
         ruolo: "Office Manager",
-        foto:  "walter-gordon-office-manager.jpg"
+        foto: "walter-gordon-office-manager.jpg"
     },
     {
-        nome : "Angela Lopez",
+        nome: "Angela Lopez",
         ruolo: "Social Media Manager",
-        foto:  "angela-lopez-social-media-manager.jpg"
+        foto: "angela-lopez-social-media-manager.jpg"
     },
     {
-        nome : "Scott Estrada",
+        nome: "Scott Estrada",
         ruolo: "Developer",
-        foto:  "scott-estrada-developer.jpg"
+        foto: "scott-estrada-developer.jpg"
     },
     {
-        nome : "Barbara Ramos",
+        nome: "Barbara Ramos",
         ruolo: "Graphic Desiner",
-        foto:  "barbara-ramos-graphic-designer.jpg"
+        foto: "barbara-ramos-graphic-designer.jpg"
     }
 ];
 
+document.getElementById("founder").innerHTML = (team[0].nome)
+document.getElementById("chief").innerHTML = (team[1].nome)
+document.getElementById("office").innerHTML = (team[2].nome)
+document.getElementById("smm").innerHTML = (team[3].nome)                 
+document.getElementById("dev").innerHTML = (team[4].nome)
+document.getElementById("graphic").innerHTML = (team[5].nome)
+
 
 // Itero sugli oggetti all'interno dell'array
-for (let i = 0 ; i < team.length; i++){
+for (let i = 0; i < team.length; i++) {
     const peopleOfteam = team[i];
     console.log(peopleOfteam)
+    let result= ""
 
-// Itero sulle proprietà degli oggetti
-// e stampo in console le informazioni per ogni membro del team
-    for(let key in team){
-        console.log(`${key} : ${team[key]}`)
+                                           
+    // Itero sulle proprietà degli oggetti
+    // e stampo in console le informazioni per ogni membro del team
+    for (let key in peopleOfteam) {
+        result += (` ${peopleOfteam[key]}`)
+        console.log(result)
+
+     
     }
+
+
 }
+
+
