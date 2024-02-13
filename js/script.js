@@ -57,12 +57,27 @@ const team = [
     }
 ];
 
-document.getElementById("founder").innerHTML = (team[0].nome)
-document.getElementById("chief").innerHTML = (team[1].nome)
-document.getElementById("office").innerHTML = (team[2].nome)
-document.getElementById("smm").innerHTML = (team[3].nome)                 
-document.getElementById("dev").innerHTML = (team[4].nome)
-document.getElementById("graphic").innerHTML = (team[5].nome)
+document.querySelector(".founder").innerHTML = (team[0].nome)
+document.querySelector(".founder-span").innerHTML = (team[0].ruolo)
+
+document.querySelector(".chief").innerHTML = (team[1].nome)
+document.querySelector(".chief-span").innerHTML = (team[1].ruolo)
+
+document.querySelector(".office").innerHTML = (team[2].nome)
+document.querySelector(".office-span").innerHTML = (team[2].ruolo)
+
+document.querySelector(".smm").innerHTML = (team[3].nome) 
+document.querySelector(".smm-span").innerHTML = (team[3].ruolo)                 
+
+document.querySelector(".dev").innerHTML = (team[4].nome)
+document.querySelector(".dev-span").innerHTML = (team[4].ruolo)
+
+document.querySelector(".graphic").innerHTML = (team[5].nome)
+document.querySelector(".graphic-span").innerHTML = (team[5].ruolo)
+
+
+
+
 
 
 // Itero sugli oggetti all'interno dell'array
@@ -75,7 +90,7 @@ for (let i = 0; i < team.length; i++) {
     // Itero sulle proprietà degli oggetti
     // e stampo in console le informazioni per ogni membro del team
     for (let key in peopleOfteam) {
-        result += (` ${peopleOfteam[key]}`)
+        result += (`${key} : ${peopleOfteam[key]}`)
         console.log(result)
 
      
