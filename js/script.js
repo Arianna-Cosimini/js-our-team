@@ -22,6 +22,8 @@ Stampare le stesse informazioni su DOM sottoforma di stringhe
 
 */
 
+
+// Creo array di oggetti
 const team = [
     {
         nome : "Wayne Barnett",
@@ -53,6 +55,17 @@ const team = [
         ruolo: "Graphic Desiner",
         foto:  "barbara-ramos-graphic-designer.jpg"
     }
-]
+];
 
-console.log(team)
+
+// Itero sugli oggetti all'interno dell'array
+for (let i = 0 ; i < team.length; i++){
+    const peopleOfteam = team[i];
+    console.log(peopleOfteam)
+
+// Itero sulle proprietà degli oggetti
+// e stampo in console le informazioni per ogni membro del team
+    for(let key in team){
+        console.log(`${key} : ${team[key]}`)
+    }
+}
