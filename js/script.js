@@ -60,34 +60,6 @@ const team = [
 
 
 
-// // stampo in pagina il nome
-// document.querySelector(".founder").innerHTML = (team[0].nome)
-// // stampo in pagina il ruolo
-// document.querySelector(".founder-span").innerHTML = (team[0].ruolo)
-
-
-
-
-// document.querySelector(".chief").innerHTML = (team[1].nome)
-// document.querySelector(".chief-span").innerHTML = (team[1].ruolo)
-
-// document.querySelector(".office").innerHTML = (team[2].nome)
-// document.querySelector(".office-span").innerHTML = (team[2].ruolo)
-
-// document.querySelector(".smm").innerHTML = (team[3].nome)
-// document.querySelector(".smm-span").innerHTML = (team[3].ruolo)
-
-// document.querySelector(".dev").innerHTML = (team[4].nome)
-// document.querySelector(".dev-span").innerHTML = (team[4].ruolo)
-
-// document.querySelector(".graphic").innerHTML = (team[5].nome)
-// document.querySelector(".graphic-span").innerHTML = (team[5].ruolo)
-
-
-
-
-
-
 // Itero sugli oggetti all'interno dell'array
 const member = document.getElementById("member")
 for (let i = 0; i < team.length; i++) {
@@ -96,15 +68,15 @@ for (let i = 0; i < team.length; i++) {
     let result = ""
 
     let newElement = document.createElement("div");
+    newElement.classList.add("col-4");
+
     let name = team[i].nome;
     let role = team[i].ruolo;
     let foto = team[i].foto;
     newElement.innerHTML =
-        `<div class="col-4">
-                        <figure class="img-founder img-fluid">${foto}</figure>
-                        <h3 class="founder">${name}</h3>
-                        <span class="founder-span">${role}</span>
-                    </div>`
+    `<img class = "card-img w-100" src="img/${foto}"/>
+        <h3 class="founder">${name}</h3>
+        <span class="founder-span">${role}</span>`
 
 
 
@@ -124,19 +96,6 @@ for (let i = 0; i < team.length; i++) {
 
 }
 
-
-// // creo elemento per poter inserire img
-// let img = document.createElement("img");
-
-
-
-// // inserito percorso dell'immagine
-// img.src = "img/wayne-barnett-founder-ceo.jpg";
-// let founder = document.querySelector(".img-founder");
-// img.style.width = "100%"
-
-// // Aggiungo elemento figlio a founder
-// founder.append(img);
 
 
 

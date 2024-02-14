@@ -1,0 +1,9 @@
+.col-4{
+    
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+.row>*{
+    padding: 0;
+}
