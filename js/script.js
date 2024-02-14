@@ -68,7 +68,7 @@ for (let i = 0; i < team.length; i++) {
     let result = ""
 
     let newElement = document.createElement("div");
-    newElement.classList.add("col-4");
+    newElement.classList.add("card");
 
     let name = team[i].nome;
     let role = team[i].ruolo;
